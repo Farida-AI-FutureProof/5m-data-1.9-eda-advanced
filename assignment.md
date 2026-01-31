@@ -13,13 +13,9 @@ Paste the answer as Python in the answer code section below each question.
 Question: Calculate the correlation between 'MSFT' and 'IBM' returns from a DataFrame of stock returns.
 
 ```python
-import pandas as pd
+corr_msft_ibm = returns["MSFT"].corr(returns["IBM"])
+print(corr_msft_ibm)
 
-# Assuming 'returns' is a DataFrame containing stock returns
-returns = pd.DataFrame({
-    'MSFT': [0.05, 0.07, -0.01],
-    'IBM': [0.04, 0.02, 0.03]
-})
 ```
 
 Answer:
@@ -45,6 +41,8 @@ df = pd.DataFrame({
 Answer:
 
 ```python
+df_long = df.melt(id_vars="A", value_vars=["B", "C"], var_name="variable", value_name="value")
+print(df_long)
 
 ```
 
@@ -63,6 +61,8 @@ data = pd.Series(np.random.rand(len(dates)), index=dates)
 Answer:
 
 ```python
+slice_data = data.loc["2023-01-05":"2023-01-15"]
+print(slice_data)
 
 ```
 
